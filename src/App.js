@@ -3,6 +3,7 @@ import './App.css';
 import Routes from "./routes";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { withRouter } from 'react-router'
 
 
 
@@ -45,4 +46,4 @@ function App(props) {
   );
 }
 
-export default App;
+export default withRouter(App);
