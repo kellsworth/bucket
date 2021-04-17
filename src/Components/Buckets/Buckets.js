@@ -1,29 +1,42 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { updateBucket, updateMoments } from '../../redux/bucketReducer'
+import BucketItem from './BucketItem/BucketItem';
+import MomentsItem from './MomentsItem/MomentsItem';
 
 
 const Buckets = (props) => {
-  const { user, updateBucket, updateMoments, bucketList } = props
+  const { user, updateBucket, updateMoments, bucketList, momentsList } = props
 
   const [bucketInput, setBucketInput] = useState('')
+
+  const getBucketAndMoments = useCallback(() => {
+    axios.get('/api/bucket')
+      .then(res => {
+        updateBucket(res.data.newBucketList)
+        updateMoments(res.data.newMomentsList)
+      })
+      .catch((err) => console.log(err))
+  })
 
   const addToBucket = () => {
     axios.post('/api/bucket', { bucketInput })
       .then((res) => {
         console.log(res.data)
-        updateBucket(res.data)
+        getBucketAndMoments()
+        // updateBucket(res.data)
+        // setting input box back to empty
+        setBucketInput('')
       })
       .catch((err) => {
         console.log(err)
       })
   }
 
+
   useEffect(() => {
-    axios.get('/api/bucket')
-      .then(res => updateBucket(res.data))
-      .catch((err) => console.log(err))
+    getBucketAndMoments()
 
   }, [])
   console.log(props)
@@ -35,9 +48,16 @@ const Buckets = (props) => {
         <button onClick={addToBucket}>Add</button>
       </div>
       <div>
-        {bucketList.map(item => {
-          return <p>{item.list_item}</p>
-        })}
+        <div>
+          {bucketList.map(item => {
+            return <BucketItem key={item.id} item={item} getBucketAndMoments={getBucketAndMoments} />
+          })}
+        </div>
+        <div>
+          {momentsList.map(item => {
+            return <MomentsItem key={item.id} item={item} updateMoments={updateMoments} />
+          })}
+        </div>
       </div>
     </section>
   )
@@ -48,6 +68,7 @@ const mapStateToProps = (stateRedux) => {
   return {
     user: stateRedux.userReducer.user,
     bucketList: stateRedux.bucketReducer.bucketList,
+    momentsList: stateRedux.bucketReducer.momentsList,
   }
 }
 

@@ -4,8 +4,8 @@ const app = express();
 const massive = require('massive');
 const { SERVER_PORT, CONNECTION_STRING } = process.env;
 const session = require('express-session');
-const userCtrl = require('./controllers/user');
-const bucketCtrl = require('./controllers/bucket');
+const userCtrl = require('./controllers/userController');
+const bucketCtrl = require('./controllers/bucketController');
 
 app.use(express.json())
 // const SERVER_PORT = 4545;
@@ -26,6 +26,7 @@ app.post('/api/auth/logout', userCtrl.logout);
 // // Bucket Endpoints
 app.post('/api/bucket', bucketCtrl.addToBucket);
 app.get('/api/bucket', bucketCtrl.getBucket);
+app.put('/api/bucket/:itemId', bucketCtrl.toggleCompleted)
 
 
 massive({

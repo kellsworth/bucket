@@ -8,7 +8,9 @@ CREATE TABLE bucket_users (
 CREATE TABLE bucket_list (
   id SERIAL PRIMARY KEY,
   list_item VARCHAR(250),
-  author_id INTEGER REFERENCES bucket_users(id)
+  author_id INTEGER REFERENCES bucket_users(id),
+  completed BOOL DEFAULT FALSE,
+  last_updated TIMESTAMP
 );
 
 CREATE TABLE moments_list (
@@ -17,3 +19,8 @@ CREATE TABLE moments_list (
   author_id INTEGER REFERENCES bucket_users(id)
 );
 
+ALTER TABLE bucket_list
+ADD COLUMN completed BOOL DEFAULT TRUE;
+
+ALTER TABLE bucket_list
+ADD COLUMN last_updated TIMESTAMP; 
