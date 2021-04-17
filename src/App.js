@@ -1,23 +1,46 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Routes from "./routes";
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-function App() {
+
+
+function App(props) {
+  const logout = () => {
+    axios.post('/api/auth/logout')
+      .then(_ => {
+        props.history.push('/')
+        // this.props.logout()
+      })
+      .catch(err => console.log(err))
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <link rel="stylesheet" href="/App.css"></link>
+        <nav className="header-nav">
+          <Link to="/buckets">
+            <h3>Buckets</h3>
+          </Link>
+          <Link to="/moments">
+            <h3>Moments</h3>
+          </Link>
+          <Link to="/contact">
+            <h3>Contact Us</h3>
+          </Link>
+          <Link to="/" onClick={logout}>
+            <h2>Logout</h2>
+          </Link>
+        </nav>
+
       </header>
+      <main>
+        {Routes}
+
+      </main>
+      <footer class="footer"><p>Buckets and Moments 2021</p></footer>
     </div>
   );
 }
