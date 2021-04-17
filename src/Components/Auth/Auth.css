@@ -14,9 +14,9 @@
 .auth-container {
   border-radius: 8px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
-  background-color: rgb(66, 124, 158);
-  width: 35vw;
-  height: 55vh;
+  background-color: rgb(200, 213, 225);
+  width: 40vw;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,14 +50,14 @@
   color: #ff7a6e;
 }
 
-/* password */
+/* username */
 .auth-input-box {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 55%;
 }
-
+/* password */
 .auth-input-box > input {
   height: 35px;
   margin-left: 10px;
@@ -81,6 +81,10 @@
 .dark-button {
   color: black
 }
+
+/* .logo {
+  
+} */
 
 @media (max-width: 800px) {
   .auth-container {

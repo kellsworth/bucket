@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import logoutLogo from './../../assets/shut_down.png';
 import './Nav.css';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -38,9 +37,6 @@ class Nav extends Component {
     console.log(this.props)
     return this.props.location.pathname !== '/' &&
       <div className='nav'>
-        <div className='nav-profile-container'>
-          <p>{this.props.username}</p>
-        </div>
         <Link to="/" onClick={this.logout}>
           <h2>Logout</h2>
         </Link>

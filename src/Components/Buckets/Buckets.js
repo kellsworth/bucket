@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './Buckets.css';
 import { useEffect, useState, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { updateBucket, updateMoments } from '../../redux/bucketReducer'
@@ -40,6 +41,7 @@ const Buckets = (props) => {
 
   }, [])
   console.log(props)
+
   return (
     <section>
       <h2>Bucket List</h2>

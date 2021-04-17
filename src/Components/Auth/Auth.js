@@ -63,7 +63,7 @@ class Auth extends Component {
       <div className='auth'>
         <div className='auth-container'>
           <h1 className='auth-title'>
-            <img src={logo} alt='logo' /></h1>
+            <img className='logo' src={logo} alt='logo' /></h1>
           {this.state.errorMsg && <h3 className='auth-error-msg'>{this.state.errorMsg} <span onClick={this.closeErrorMessage}>X</span></h3>}
           <div className='auth-input-box'>
             <p>Username:</p>
