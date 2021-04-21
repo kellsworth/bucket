@@ -1,9 +1,13 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   /* color: rgb(241, 238, 238); */
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .App {
@@ -18,20 +22,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1px + 2vmin);
   color: rgb(5, 5, 5);
 }
 
 .header-nav {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  background-color: transparent
+  background-color: transparent;
 }
 
 .header-nav h3 {
   margin: 0 150px;
-  color:black;
+  color: black;
 }
 
 .header-nav img {
@@ -41,7 +45,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  position:fixed;
+  position: fixed;
   bottom: 0px;
   width: 100vw;
 }

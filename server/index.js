@@ -25,7 +25,8 @@ app.post('/api/auth/logout', userCtrl.logout);
 // // Bucket Endpoints
 app.post('/api/bucket', bucketCtrl.addToBucket);
 app.get('/api/bucket', bucketCtrl.getBucket);
-app.put('/api/bucket/:itemId', bucketCtrl.toggleCompleted)
+app.put('/api/bucket/:itemId', bucketCtrl.toggleCompleted);
+app.delete('/api/bucket/:itemId', bucketCtrl.deleteBucket);
 
 
 massive({

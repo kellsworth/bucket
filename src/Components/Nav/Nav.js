@@ -37,9 +37,7 @@ class Nav extends Component {
     console.log(this.props)
     return this.props.location.pathname !== '/' &&
       <div className='nav'>
-        <Link to="/" onClick={this.logout}>
-          <h2>Logout</h2>
-        </Link>
+          <h2 onClick={this.logout}>Logout</h2>
       </div>
   }
 }

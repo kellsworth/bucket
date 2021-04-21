@@ -25,5 +25,17 @@ module.exports = {
 
     const newList = await db.bucket.toggle_completed({ id, itemId, completed: !completed })
     res.status(200).send(newList)
-  }
-}
+  },
+ 
+    deleteBucket: async (req, res) => {
+      const { id } = req.session.user
+      console.log(id)
+      const { itemId } = req.params
+      const db = req.app.get('db')
+
+      const newList = await db.bucket.delete_bucket(itemId, id)
+      res.status(200).send(newList)
+      
+    }
+} 
+

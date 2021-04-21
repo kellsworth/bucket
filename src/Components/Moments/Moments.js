@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import './Moments.css';
 
 class Moments extends Component {
   constructor(props) {
@@ -9,11 +10,16 @@ class Moments extends Component {
   }
   render() {
     return (
-      <div>
-        moments
+      <section>
+        <h2>Moments List</h2>
+        <div>
+          moments
       </div>
+      </section>
     )
   }
 }
 
 export default Moments
+
+

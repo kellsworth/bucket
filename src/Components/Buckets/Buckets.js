@@ -2,7 +2,7 @@ import axios from 'axios';
 import './Buckets.css';
 import { useEffect, useState, useCallback } from 'react';
 import { connect } from 'react-redux';
-import { updateBucket, updateMoments } from '../../redux/bucketReducer'
+import { updateBucket, updateMoments } from '../../redux/bucketReducer';
 import BucketItem from './BucketItem/BucketItem';
 import MomentsItem from './MomentsItem/MomentsItem';
 
@@ -34,7 +34,7 @@ const Buckets = (props) => {
         console.log(err)
       })
   }
-
+ 
 
   useEffect(() => {
     getBucketAndMoments()
