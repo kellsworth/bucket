@@ -18,9 +18,11 @@ function App(props) {
 
   return (
     <div className="App">
+      <title>Buckets and Moments</title>
       <header className="App-header">
         <link rel="stylesheet" href="/App.css"></link>
         <nav className="header-nav">
+          {/* <img src="/assets/small_logo.png"/> */}
           <Link to="/buckets">
             <h3>Buckets</h3>
           </Link>
@@ -31,7 +33,7 @@ function App(props) {
             <h3>Contact Us</h3>
           </Link>
           <Link to="/" onClick={logout}>
-            <h2>Logout</h2>
+            <h3>Logout</h3>
           </Link>
         </nav>
 

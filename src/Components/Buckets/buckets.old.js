@@ -43,15 +43,8 @@ const Buckets = (props) => {
   console.log(props)
 
   return (
-    <body>
+    <section>
       <h2>Bucket List</h2>
-      <div class="container">
-        <section class="hero">
-          <div class="header">
-            <h1>It's a Bucket List, Do Something Rad!</h1>
-          </div>
-        </section>
-      </div>
       <div>
         <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} />
         <button onClick={addToBucket}>Add</button>
@@ -68,7 +61,7 @@ const Buckets = (props) => {
           })}
         </div>
       </div>
-    </body>
+    </section>
   )
 
 }

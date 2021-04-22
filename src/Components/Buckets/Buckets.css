@@ -1,6 +1,12 @@
 /* Buckets pg */
-section {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://source.unsplash.com/collection/923414/1200x900");
+/* body {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 75%,
+      #000000 100%
+    ),
+    url("https://source.unsplash.com/collection/923414/1200x900");
   height: calc(100vh - 75px);
   width: 100vw;
   background-size: cover;
@@ -8,10 +14,88 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
-}
+} */
 
 section h2 {
-font-size: 100px;
+  font-size: 50px;
+}
 
+/* Container - Hero */
+.container {
+  height: 100%;
+  display: grid;
+  /*grid-gap: 3px;*/
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "m m m m m m m m m m m m"
+    "h h h h h h h h h h h h"
+    "c c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+
+.container > div {
+  /*justify-content: center;*/
+  align-items: center;
+  /* font-size: 2em; */
+  grid-gap: 3px;
+}
+
+.container .header {
+  display: grid;
+  text-align: center;
+}
+
+.container .content > div {
+  display: grid;
+}
+
+/*
+================
+hero
+================
+*/
+.hero {
+  /* Sizing */
+  width: 100vw;
+  height: 70vh;
+
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Text styles */
+  text-align: center;
+  color: white;
+
+  /* Background styles */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://source.unsplash.com/collection/923414/1200x900");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero h1 {
+  /* Text styles */
+  font-size: 5em;
+  /* Margins */
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+/*end hero*/
+
+/*.logo img {*/
+/*grid-area: l;*/
+/*  max-width: 50px;*/
+/*}*/
+
+/*div.logo {*/
+/*  transform: rotate(-25deg);*/
+/*}*/
+
+.content {
+  grid-area: c;
 }
