@@ -19,7 +19,7 @@ const BucketItem = (props) => {
   }
 
   return (
-    <div className='bucket-item'>
+    <div className='bucket-item' key={props.key}>
       <input type='checkbox' onChange={toggleCheckbox} />
       <h3>{item.list_item}</h3>
       <button onClick={deleteItem}>delete</button>

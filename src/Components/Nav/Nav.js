@@ -1,46 +1,40 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 import './Nav.css';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { updateUser, logout } from '../../redux/reducer';
+// import { getUser } from '../../../server/controllers/userController';
 
 
-class Nav extends Component {
-  constructor(props) {
-    super(props);
+function Nav(props) {
+  
+  useEffect(() => {
+    getUser()
+  })
+ 
 
-    this.logout = this.logout.bind(this);
-    this.getUser = this.getUser.bind(this);
-  }
-
-  componentDidMount() {
-    this.getUser()
-  }
-
-  getUser() {
+  function getUser() {
     axios.get('/api/auth/me')
-      .then(res => this.props.updateUser(res.data))
+      .then(res => props.updateUser(res.data))
   }
 
-  logout() {
+  function logout() {
     axios.post('/api/auth/logout')
       .then(_ => {
-        this.props.history.push('/')
+        props.history.push('/')
         // this.props.logout()
       })
       .catch(err => console.log(err))
   }
 
-
-  render() {
-    console.log(this.props)
-    return this.props.location.pathname !== '/' &&
+    console.log(props)
+    return props.location.pathname !== '/' &&
       <div className='nav'>
-          <h2 onClick={this.logout}>Logout</h2>
+          <h2 onClick={logout}>Logout</h2>
       </div>
-  }
 }
+
 
 const mapStateToProps = (stateRedux) => stateRedux;
 

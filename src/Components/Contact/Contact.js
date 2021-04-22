@@ -1,19 +1,16 @@
-import { Component } from 'react';
+import { useState } from 'react';
 
-class Contact extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      contactInput: '',
-    }
-  }
-  render() {
+function Contact() {
+  
+  const [contactInput, setContactInput] = useState('')
+ 
+  
     return (
       <div>
         contact us
       </div>
     )
-  }
+  
 }
 
 export default Contact
