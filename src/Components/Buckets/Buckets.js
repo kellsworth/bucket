@@ -49,7 +49,7 @@ const Buckets = (props) => {
       </div>
       <div className="bucket">
         <h2>The Bucket List</h2>
-          <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} />
+          <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)}/>
           <button onClick={addToBucket} className="button-bucket">Add to Bucket</button>
       </div>
       <div>

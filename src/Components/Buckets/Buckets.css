@@ -93,12 +93,29 @@ hero
 
 /* Add To Bucket Input */
 
-/* .bucket {
+.bucket h2 {
   margin-left: 150px;
   margin-top: 50px;
 }
 
-.button-bucket {
+/* .bucket input {
+  margin-left: 150px;
+  margin-top: 50px;
+} */
+
+.bucket input {
+  width: 100%;
+  background-color: var(--primary);
+  color: rgb(168, 23, 23);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid grey;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* .button-bucket {
   padding: 1%;
   margin: 10px;
 } */
