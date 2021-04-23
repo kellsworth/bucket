@@ -16,7 +16,7 @@
   align-items: center;
 } */
 
-section h2 {
+body h2 {
   font-size: 50px;
 }
 
@@ -98,4 +98,10 @@ hero
 
 .content {
   grid-area: c;
+}
+
+/* Add To Bucket Input */
+
+.bucket h3 {
+  margin-left: 60px;
 }

@@ -42,7 +42,7 @@ function App(props) {
         {Routes}
 
       </main>
-      <footer class="footer"><p>Buckets and Moments 2021</p></footer>
+      <footer class="footer"><p>Buckets and Moments | Karen Ellsworth</p></footer>
     </div>
   );
 }

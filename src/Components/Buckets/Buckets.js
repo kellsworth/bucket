@@ -44,17 +44,20 @@ const Buckets = (props) => {
 
   return (
     <body>
-      <h2>Bucket List</h2>
-      <div class="container">
-        <section class="hero">
-          <div class="header">
+      
+      <div className="container">
+        <section className="hero">
+          <div className="header">
             <h1>It's a Bucket List, Do Something Rad!</h1>
           </div>
         </section>
       </div>
-      <div>
-        <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} />
-        <button onClick={addToBucket}>Add</button>
+      <div className="bucket">
+        <h2>The Bucket List</h2>
+        <h3>
+          <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} />
+          <button onClick={addToBucket}>Add to Bucket</button>
+        </h3>
       </div>
       <div>
         <div>
