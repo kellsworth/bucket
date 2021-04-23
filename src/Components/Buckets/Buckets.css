@@ -102,7 +102,23 @@ hero
 
 /* Add To Bucket Input */
 
-.bucket h3 {
+.bucket {
   margin-left: 150px;
   margin-top: 50px;
+}
+
+.button-bucket {
+  padding: 1%;
+  margin: 10px;
+}
+
+@media (max-width: 800px) {
+  .auth-container {
+    width: 100vw;
+    background-image: none;
+    box-shadow: none;
+  }
+  .hero {
+    width: 100%;
+  }
 }

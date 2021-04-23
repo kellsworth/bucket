@@ -1,5 +1,11 @@
 section {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://source.unsplash.com/collection/923414/1200x900");
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 75%,
+      #000000 100%
+    ),
+    url("https://source.unsplash.com/collection/923414/1200x900");
   height: calc(100vh - 75px);
   width: 100vw;
   background-size: cover;
@@ -7,11 +13,25 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color:white
+  color: white;
 }
 
 section h2 {
-font-size: 100px;
-color: white;
+  font-size: 100px;
+  color: white;
+}
 
+@media (max-width: 800px) {
+  .auth-container {
+    width: 100vw;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  section {
+    width: 100%;
+  }
+  header.app-header {
+    width: 100%;
+  }
 }
