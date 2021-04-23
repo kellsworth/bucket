@@ -9,10 +9,67 @@
   font-size: 1em;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(66, 62, 62);
+  border-radius: 15px;
   color: rgb(27, 141, 82);
 }
 
-.delete {
+/* .moments-item input {
+  width: 100%;
+  background-color: var(--primary);
+  color: rgb(168, 23, 23);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1em;
+} */
+
+button:hover {
+  background-color: var(--info);
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  font-size: 1em;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--light-shade);
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--info);
+}
+
+.circle {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  /*padding: 8px;*/
+  /*background: #333;*/
+  /*color: #fff;*/
+}
+
+*/ .delete {
   /* display: none; */
   /* margin-left: auto;*/
   border-radius: 50%;
