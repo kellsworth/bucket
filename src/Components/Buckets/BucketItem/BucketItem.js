@@ -1,4 +1,5 @@
 import axios from "axios";
+import './BucketItem.css';
 import { updateBucket } from '../../../redux/bucketReducer';
 import { connect } from 'react-redux';
 
@@ -22,7 +23,7 @@ const BucketItem = (props) => {
     <div className='bucket-item' key={props.key}>
       <input type='checkbox' onChange={toggleCheckbox} />
       <h3>{item.list_item}</h3>
-      <button onClick={deleteItem}>delete</button>
+      <button onClick={deleteItem} className="delete">delete</button>
     </div>
   )
 }

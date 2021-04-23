@@ -1,6 +1,6 @@
 import axios from 'axios';
 import './Moments.css';
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { updateBucket, updateMoments } from '../../redux/bucketReducer';
 // import BucketItem from '../../Components/Buckets/BucketItem/BucketItem';
@@ -8,11 +8,11 @@ import MomentsItem from '../../Components/Buckets/MomentsItem/MomentsItem';
 
 
 const Moments = (props) => {
-  const { updateBucket, updateMoments, bucketList, momentsList } = props
+  const { updateBucket, updateMoments, momentsList } = props
 
   const [momentsInput, setMomentsInput] = useState('')
 
-  const getBucketAndMoments = useCallback(() => {
+  const getBucketAndMoments = useEffect(() => {
     axios.get('/api/bucket')
       .then(res => {
         updateBucket(res.data.newBucketList)
@@ -35,10 +35,6 @@ const Moments = (props) => {
       })
   }
  
-  useEffect(() => {
-    getBucketAndMoments()
-
-  }, [])
   console.log(props)
 
   return (

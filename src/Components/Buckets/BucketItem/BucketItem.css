@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  /* color: rgb(241, 238, 238); */
+  font-family: "Nunito", sans-serif;
+}
+
+.bucket-item {
+  background: #fff;
+  /*width: 500px;*/
+  min-height: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+/* .delete {
+  display: none;
+  margin-left: auto;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: var(--dark-accent);
+} */
+
+li:hover .delete {
+  display: block;
+}
+
+/* Form */
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  font-size: 1em;
+}
+
+.addBucket {
+  display: flex;
+  justify-content: center;
+}
+
+.addBucket > div {
+  padding: 1%;
+  align-items: center;
+  text-align: center;
+}

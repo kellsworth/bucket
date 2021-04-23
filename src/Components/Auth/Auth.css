@@ -1,6 +1,12 @@
 /* Auth (Home) pg */
 .auth {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://source.unsplash.com/collection/923414/1200x900");
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 75%,
+      #000000 100%
+    ),
+    url("https://source.unsplash.com/collection/923414/1200x900");
   height: calc(100vh - 75px);
   width: 100vw;
   background-size: cover;
@@ -8,13 +14,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
 }
 
 .auth-container {
   border-radius: 8px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
-  background-color: rgb(217, 223, 228);
+  background-color: rgb(191, 197, 202);
   width: 40vw;
   height: 35vh;
   display: flex;
@@ -29,7 +34,6 @@
 .auth-title {
   height: 60px;
   width: 150px;
-  
 }
 
 .auth-error-msg {
@@ -79,7 +83,7 @@
 }
 
 .dark-button {
-  color: black
+  color: black;
 }
 
 /* .logo {
