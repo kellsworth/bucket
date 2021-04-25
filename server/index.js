@@ -44,7 +44,7 @@ app.get('/api/bucket', bucketCtrl.getBucket);
 app.put('/api/bucket/:itemId', bucketCtrl.toggleCompleted);
 app.delete('/api/bucket/:itemId', bucketCtrl.deleteBucket);
 app.get('/', (req, res) => {
-  res.send('Hello');
+  res.render('contact');
 });
 
 

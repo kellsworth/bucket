@@ -1,16 +1,40 @@
-import { useState } from 'react';
+import React from 'react';
+import form from './form';
+import './Contact.css'
 
-function Contact() {
-  
-  const [contactInput, setContactInput] = useState('')
- 
-  
-    return (
-      <div>
-        contact us
-      </div>
-    )
-  
+function App() {
+  return (
+    <div className="App">
+      {/* <Form/> */}
+    </div>  
+  );
 }
 
-export default Contact
+
+export default App;
+
+
+
+
+
+
+
+
+// import Form from './form';
+// import { useState } from 'react';
+
+// function Contact() {
+  
+//   const [contactInput, setContactInput] = useState('')
+ 
+  
+//     return (
+//       <div>Contact Us</div>
+//     )
+  
+// }
+
+// export default Contact
+
+
+
