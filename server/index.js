@@ -21,7 +21,8 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
 // Static folder
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/../build'))
+// app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use(express.json())
 // const SERVER_PORT = 4545;
@@ -43,8 +44,8 @@ app.post('/api/bucket', bucketCtrl.addToBucket);
 app.get('/api/bucket', bucketCtrl.getBucket);
 app.put('/api/bucket/:itemId', bucketCtrl.toggleCompleted);
 app.delete('/api/bucket/:itemId', bucketCtrl.deleteBucket);
-app.get('/', (req, res) => {
-  res.render('contact');
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'))
 });
 
 
