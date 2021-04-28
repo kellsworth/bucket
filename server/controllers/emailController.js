@@ -11,7 +11,7 @@ module.exports = {
     try {
       //invoke the createTransport function passing in your email information. 
       let transporter = nodemailer.createTransport({
-        service: 'smtp.outlook.office365.com',
+        service: 'info@bucketsandmoments.com',
         auth: {
           user: EMAIL,
           pass: PASSWORD, 
