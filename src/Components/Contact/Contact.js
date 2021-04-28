@@ -36,8 +36,9 @@ class App extends React.Component {
     const { name, email, message, title,image } = this.state
     return (
       <div style={styles.body}>
-        <div style={styles.form}>
-          <h1 style={styles.header}>Email Us</h1>
+        <section className="hero">
+          <div style={styles.form}>
+            <h1 style={styles.header}>Email Us</h1>
           <input style={styles.input} placeholder='title' type="text" name='title' value={title} onChange={this.handleInput} />
           <input style={styles.input} placeholder='name' type="text" name='name' value={name} onChange={this.handleInput} />
           <input style={styles.input} placeholder='email' type="text" name='email' value={email} onChange={this.handleInput} />
@@ -45,6 +46,7 @@ class App extends React.Component {
           <input style={styles.input} placeholder='image' type="text" name='image' value={image} onChange={this.handleInput} />
           <button style={styles.button} onClick={this.handleSend}>Send</button>
         </div>
+        </section>
       </div>
     )
   }
