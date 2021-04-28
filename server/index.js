@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars')
 const path = require('path');
 const nodemailer = require('nodemailer');
+const ctrl = require('./controllers/emailController');
 
 
 //View engine setup
@@ -38,6 +39,7 @@ app.use(session({
 app.post('/api/auth/register', userCtrl.register);
 app.post('/api/auth/login', userCtrl.login);
 app.post('/api/auth/logout', userCtrl.logout);
+app.post('/api/email', ctrl.email)
 
 // // Bucket Endpoints
 app.post('/api/bucket', bucketCtrl.addToBucket);
