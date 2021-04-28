@@ -92,7 +92,8 @@ const styles = {
     fontWeight:'bold',
     letterSpacing:'0.07em'
     
-  }
+  },
+ 
 }
 
 

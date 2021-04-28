@@ -11,10 +11,10 @@ module.exports = {
     try {
       //invoke the createTransport function passing in your email information. 
       let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'smtp.outlook.office365.com',
         auth: {
           user: EMAIL,
-          pass: PASSWORD
+          pass: PASSWORD, 
         }
       });
 
