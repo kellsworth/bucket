@@ -37,7 +37,7 @@ class App extends React.Component {
     return (
       <div style={styles.body}>
         <div style={styles.form}>
-          <h1 style={styles.header}>Email Kevin</h1>
+          <h1 style={styles.header}>Email Us</h1>
           <input style={styles.input} placeholder='title' type="text" name='title' value={title} onChange={this.handleInput} />
           <input style={styles.input} placeholder='name' type="text" name='name' value={name} onChange={this.handleInput} />
           <input style={styles.input} placeholder='email' type="text" name='email' value={email} onChange={this.handleInput} />
@@ -91,6 +91,7 @@ const styles = {
     fontSize:35,
     fontWeight:'bold',
     letterSpacing:'0.07em'
+    
   }
 }
 
