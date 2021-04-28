@@ -21,7 +21,6 @@ function App(props) {
   return (
     <div className="App">
       <title>Buckets and Moments</title>
-      <meta>Buckets and Moments</meta>
       <header className="App-header">
         <link rel="stylesheet" href="/App.css"></link>
         <nav className="header-nav">
