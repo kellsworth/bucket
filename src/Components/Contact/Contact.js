@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   handleSend = () => {
-    const { name, email, message, title ,image} = this.state
+    const { name, email, message} = this.state
     axios.post('/api/email', { name, email, message }).then(res => {
       this.setState({
         name: '',
@@ -29,7 +29,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { name, email, message, title,image } = this.state
+    const { name, email, message } = this.state
     return (
       <div style={styles.body}>
         <section className="hero">
