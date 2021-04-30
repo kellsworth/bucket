@@ -6,12 +6,12 @@ const { EMAIL, PASSWORD } = process.env
 
 module.exports = {
   email: async (req, res) => {
-    const { name, message, email, title, image } = req.body
+    const { name, message, email } = req.body
 
     try {
       //invoke the createTransport function passing in your email information. 
       let transporter = nodemailer.createTransport({
-        service: 'info@bucketsandmoments.com',
+        service: 'outlook.office.com',
         auth: {
           user: EMAIL,
           pass: PASSWORD, 

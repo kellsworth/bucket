@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
 
 // Static folder
-app.use('/../src/Components/Contact', express.static(path.join(__dirname, 'Contact')));
+app.use('/../src/components/contact', express.static(path.join(__dirname, 'contact')));
 // app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use(express.json())
