@@ -34,8 +34,6 @@ const Buckets = (props) => {
         console.log(err)
       })
   }
- 
-
 
   return (
     <body>
