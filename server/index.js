@@ -6,7 +6,6 @@ const { SERVER_PORT, CONNECTION_STRING } = process.env;
 const session = require('express-session');
 const userCtrl = require('./controllers/userController');
 const bucketCtrl = require('./controllers/bucketController');
-const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars')
 const path = require('path');
 const nodemailer = require('nodemailer');
@@ -16,10 +15,6 @@ const ctrl = require('./controllers/emailController');
 //View engine setup
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
-
-// Body Parser Middleware
-app.use(bodyParser.urlencoded({ extended: false}));
-app.use(bodyParser.json());
 
 // Static folder
 app.use(express.static(__dirname + '/../build'))

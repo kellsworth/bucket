@@ -2,7 +2,7 @@
 const nodemailer = require('nodemailer')
 
 //import environment variables for your email
-const { EMAIL, PASSWORD } = process.env
+const { EMAIL_GMAIL, PASSWORD } = process.env
 
 module.exports = {
   email: async (req, res) => {
@@ -11,9 +11,11 @@ module.exports = {
     try {
       //invoke the createTransport function passing in your email information. 
       let transporter = nodemailer.createTransport({
-        service: 'outlook.office.com/mail',
+        service: 'gmail',
+        // secureConnection: false, // TLS requires secureConnection to be false
+        // port: 587, // port for secure SMTP
         auth: {
-          user: EMAIL,
+          user: EMAIL_GMAIL,
           pass: PASSWORD, 
         }
       });
@@ -21,8 +23,8 @@ module.exports = {
       //invoke the sendMail function with the info in the email
       let info = await transporter.sendMail({
         from: `'${name}' <${email}>`, //This will show up when you go into the email
-        to: EMAIL,
-        subject: title, //This will show on the subject of the email
+        to: EMAIL_GMAIL,
+        subject: 'Buckets and Moments', //This will show on the subject of the emailRS
         text: message, //for clients with plaintext support only
         html: `<div>${message}<div> 
               <img src="cid:unique@nodemailer.com"/>`,
@@ -33,7 +35,7 @@ module.exports = {
           },
           { //this is the embedded image
             cid: 'unique@nodemailer.com', //same cid value as in the html img src
-            path:image
+            // path:image
           }
         ]
       }, (err, res) => {
@@ -41,6 +43,7 @@ module.exports = {
           console.log('err', err)
         } else {
           console.log('res', res)
+          console.log('it works')
           res.status(200).send(info)
         }
       })
