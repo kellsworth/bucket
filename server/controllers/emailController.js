@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer')
 const { EMAIL_GMAIL, PASSWORD } = process.env
 
 module.exports = {
-  email: async (req, res) => {
+  email: async (req, response) => {
     const { name, message, email } = req.body
 
     try {
@@ -44,7 +44,7 @@ module.exports = {
         } else {
           console.log('res', res)
           console.log('it works')
-          res.status(200).send(info)
+          response.status(200).send(info)
         }
       })
     } catch (err) {

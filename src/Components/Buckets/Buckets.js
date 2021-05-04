@@ -1,6 +1,6 @@
 import axios from 'axios';
 import './Buckets.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { updateBucket, updateMoments } from '../../redux/bucketReducer';
 import BucketItem from './BucketItem/BucketItem';
@@ -12,7 +12,7 @@ const Buckets = (props) => {
 
   const [bucketInput, setBucketInput] = useState('')
 
-  const getBucketAndMoments = useEffect(() => {
+  const getBucketAndMoments = useCallback(() => {
     axios.get('/api/bucket')
       .then(res => {
         updateBucket(res.data.newBucketList)
@@ -20,6 +20,10 @@ const Buckets = (props) => {
       })
       .catch((err) => console.log(err))
   })
+
+  useEffect(() => {
+    getBucketAndMoments()
+  },[])
 
   const addToBucket = () => {
     axios.post('/api/bucket', { bucketInput })
@@ -47,7 +51,7 @@ const Buckets = (props) => {
       </div>
       <div className="bucket">
         <h2>The Bucket List</h2>
-          <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} />
+          <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} placeholder='Enter Bucket Item Here'/>
           <button onClick={addToBucket} className="button-bucket">Add to Bucket List</button>
       </div>
       <div>
