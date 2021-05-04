@@ -21,7 +21,9 @@
 }
 
 .bucket-item h3 {
-  color: blue;
+  color: rgb(69, 69, 89);
+  text-align: center;
+  justify-content: center;
 }
 
 .delete {

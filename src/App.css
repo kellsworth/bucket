@@ -33,6 +33,14 @@ a {
   background-color: transparent;
 }
 
+@media (max-width: 800px) {
+  .App-header {
+    width: 100vw;
+    background-image: none;
+    box-shadow: none;
+  }
+}
+
 .header-nav h3 {
   margin: 0 150px;
   color: black;

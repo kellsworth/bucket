@@ -66,6 +66,7 @@ const styles = {
     justifyContent:'space-evenly',
     borderRadius:10
   },
+
   header:{
     fontSize:60,
     margin:0,
@@ -92,7 +93,13 @@ const styles = {
  
 }
 
-
+// @media (max-width: 800px) {
+//   .div {
+//     width: 100vw;
+//     background-image: none;
+//     box-shadow: none;
+//   };
+// }
 
 
 
