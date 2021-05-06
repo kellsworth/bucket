@@ -52,7 +52,7 @@ const Buckets = (props) => {
       <div className="bucket">
         <h2>The Bucket List</h2>
           <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} placeholder='Enter Bucket Item Here'/>
-          <button onClick={addToBucket} className="button-bucket">Add to Bucket List</button>
+          <button onClick={addToBucket} className="button-bucket">Click here to add to Bucket List</button>
       </div>
       <div>
         <div className="completed">
@@ -60,7 +60,10 @@ const Buckets = (props) => {
             return <BucketItem key={item.id} item={item} getBucketAndMoments={getBucketAndMoments} />
           })}
         </div>
+        <br></br>
           <h3>Done!</h3>
+          <br></br>
+          
         <div>
           {momentsList.map(item => {
             return <MomentsItem key={item.id} item={item} updateMoments={updateMoments} />

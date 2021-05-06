@@ -1,23 +1,7 @@
 /* Buckets pg */
-/* body {
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.7) 75%,
-      #000000 100%
-    ),
-    url("https://source.unsplash.com/collection/923414/1200x900");
-  height: calc(100vh - 75px);
-  width: 100vw;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
 body {
-  background-color: #f6f3f3;
+  background-color: #ede7e7;
 }
 
 body h2 {
@@ -109,14 +93,15 @@ hero
 
 .bucket input {
   width: 100%;
-  background-color: var(--primary);
-  color: rgb(168, 23, 23);
-  padding: 14px 20px;
+  background-color: white;
+  color: rgb(24, 8, 128);
+  padding: 25px 20px;
   margin: 8px 0;
   border: 1px solid grey;
   border-radius: 15px;
   cursor: pointer;
   font-size: 1em;
+  text-align: center;
 }
 
 /* .button-bucket {
@@ -126,14 +111,15 @@ hero
 
 .button-bucket {
   width: 100%;
-  background-color: var(--primary);
+  background-color: white;
   color: rgb(168, 23, 23);
-  padding: 14px 20px;
+  padding: 25px 0px;
   margin: 8px 0;
   border: 1px solid grey;
   border-radius: 15px;
   cursor: pointer;
   font-size: 1em;
+  text-align: center;
 }
 
 button:hover {
@@ -152,10 +138,11 @@ select {
   box-sizing: border-box;
 }
 
-.completed h3 {
-  margin-left: 150px;
-  margin-top: 50px;
-  text-align: center;
+h3 {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  margin: 20px;
 }
 
 /* .moment-item {

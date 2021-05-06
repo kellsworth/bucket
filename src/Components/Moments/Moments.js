@@ -45,11 +45,11 @@ const Moments = (props) => {
         <button onClick={addToMoments}>Add</button>
       </div>
       <div>
-        {/* <div>
-          {momentsList.map(item => {
+        <div>
+          {/* {momentsList.map(item => {
             return <MomentsItem key={item.id} item={item} getBucketAndMoments={getBucketAndMoments} />
-          })}
-        </div> */}
+          })} */}
+        </div>
         <div>
           {momentsList.map(item => {
             return <MomentsItem key={item.id} item={item} updateMoments={updateMoments} />

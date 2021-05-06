@@ -46,7 +46,7 @@ function App(props) {
                 <li><a id="links">Moments</a></li>
               </Link>
               <Link to="/contact">
-                <li><a id="links">Contact Us</a></li>
+                <li><a id="links">Contact</a></li>
               </Link>
               <Link to="/" onClick={logout}>
                 <li><a id="links">Logout</a></li>
