@@ -12,11 +12,18 @@
   background-attachment: fixed;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .hero {
     width: 100vw;
     background-image: none;
     box-shadow: none;
     font-size: 2em;
   }
+
+  /* div.form {
+    width: 100vw;
+    background-image: none;
+    box-shadow: none;
+    font-size: 0.5em;
+  } */
 }

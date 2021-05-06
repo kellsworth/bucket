@@ -91,7 +91,7 @@
   margin: 0px 0px 200px 0px;
 } */
 
-@media (max-width: 800px) {
+@media (max-width: 400px) {
   .auth-container {
     width: 100vw;
     background-image: none;
@@ -102,8 +102,8 @@
   }
 
   .auth-title .logo {
-    height: 60px;
+    height: 50px;
     /* width: 30px; */
-    width: 100vw;
+    width: 30vw;
   }
 }
