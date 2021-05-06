@@ -30,10 +30,11 @@
   position: relative;
 }
 
-/* title */
+/* title logo */
 .auth-title {
-  height: 60px;
-  width: 150px;
+  height: 90px;
+  width: 30px;
+  margin-right: 430px;
 }
 
 .auth-error-msg {
@@ -59,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55%;
+  width: 35%;
 }
 /* password */
 .auth-input-box > input {
@@ -86,9 +87,9 @@
   color: black;
 }
 
-.auth-container .logo {
-  margin: 0px 0px 250px 0px;
-}
+/* img.logo {
+  margin: 0px 0px 200px 0px;
+} */
 
 @media (max-width: 800px) {
   .auth-container {
@@ -98,5 +99,11 @@
   }
   .auth-button-container {
     width: 100%;
+  }
+
+  .auth-title .logo {
+    height: 60px;
+    /* width: 30px; */
+    width: 100vw;
   }
 }
