@@ -22,10 +22,11 @@ section h2 {
 }
 
 @media (max-width: 800px) {
-  .auth-container {
+  section h2 {
     width: 100vw;
     background-image: none;
     box-shadow: none;
+    font-size: 3em;
   }
 
   section {

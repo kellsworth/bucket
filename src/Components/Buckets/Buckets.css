@@ -82,7 +82,7 @@ hero
 /* Add To Bucket Input */
 
 .bucket h2 {
-  margin-left: 150px;
+  margin-left: 110px;
   margin-top: 50px;
 }
 
@@ -158,10 +158,11 @@ h3 {
 } */
 
 @media (max-width: 800px) {
-  .auth-container {
+  .hero h1 {
     width: 100vw;
     background-image: none;
     box-shadow: none;
+    font-size: 2em;
   }
 
   .hero {
