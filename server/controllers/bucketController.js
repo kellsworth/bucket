@@ -9,6 +9,14 @@ module.exports = {
     res.status(201).send(newList)
     // need to change above response //
   },
+  addToMoments: async (req, res) => {
+    const { id } = req.session.user
+    const { momentsInput } = req.body
+    const db = req.app.get('db')
+
+    await db.bucket.add_to_moments({ id, momentsInput })
+    res.sendStatus(201)
+  },
   getBucket: async (req, res) => {
     const { id } = req.session.user
     const db = req.app.get('db')

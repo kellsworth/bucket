@@ -19,7 +19,7 @@ const Buckets = (props) => {
         updateMoments(res.data.newMomentsList)
       })
       .catch((err) => console.log(err))
-  })
+  },[updateMoments, updateBucket])
 
   useEffect(() => {
     getBucketAndMoments()
@@ -66,7 +66,7 @@ const Buckets = (props) => {
           
         <div>
           {momentsList.map(item => {
-            return <MomentsItem key={item.id} item={item} updateMoments={updateMoments} />
+            return <MomentsItem key={item.id} item={item} updateMoments={updateMoments} getBucketAndMoments={getBucketAndMoments} />
           })}
         </div>
       </div>

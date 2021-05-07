@@ -14,8 +14,11 @@ const MomentsItem = (props) => {
 
   const deleteItem = () => {
     let itemId = item.id 
-    axios.delete(`/api/moments/${itemId}`) 
-      .then(res => props.updateMoments(res.data))
+    axios.delete(`/api/bucket/${itemId}`) 
+      .then(res => {
+        // props.updateMoments(res.data)
+        getBucketAndMoments()
+      })
       .catch(err => console.log(err))
   }
 

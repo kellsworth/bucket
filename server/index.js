@@ -38,6 +38,7 @@ app.post('/api/email', ctrl.email)
 
 // // Bucket Endpoints
 app.post('/api/bucket', bucketCtrl.addToBucket);
+app.post('/api/moments', bucketCtrl.addToMoments);
 app.get('/api/bucket', bucketCtrl.getBucket);
 app.put('/api/bucket/:itemId', bucketCtrl.toggleCompleted);
 app.delete('/api/bucket/:itemId', bucketCtrl.deleteBucket);
