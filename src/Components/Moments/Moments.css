@@ -11,8 +11,8 @@ section {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  padding-top: 200px;
-  /* justify-content: center; */
+  /* padding-top: 200px; */
+  justify-content: center;
   align-items: center;
   color: white;
 }
