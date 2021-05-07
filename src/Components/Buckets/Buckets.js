@@ -52,7 +52,7 @@ const Buckets = (props) => {
       <div className="bucket">
         <h2>The Bucket List</h2>
           <input value={bucketInput} onChange={(e) => setBucketInput(e.target.value)} placeholder='Enter Bucket Item Here'/>
-          <button onClick={addToBucket} className="button-bucket">Click here to add to Bucket List</button>
+          <button onClick={addToBucket} className="button-bucket">Click here to add Bucket List item</button>
       </div>
       <div>
         <div className="completed">

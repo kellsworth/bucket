@@ -50,9 +50,9 @@ const Moments = (props) => {
           })}
         </div>
         <div>
-          {momentsList.map(item => {
+          {/* {momentsList.map(item => {
             return <MomentsItem key={item.id} item={item} updateMoments={updateMoments} />
-          })}
+          })} */}
         </div>
       </div>
     </section>

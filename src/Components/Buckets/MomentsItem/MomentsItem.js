@@ -6,11 +6,11 @@ import { connect } from 'react-redux';
 const MomentsItem = (props) => {
   const { item, getBucketAndMoments } = props
 
-  const toggleCheckbox = () => {
-    axios.put(`/api/moments/${item.id}`, { completed: item.completed })
-      .then(res => getBucketAndMoments())
-      .catch(err => console.log(err))
-  }
+  // const toggleCheckbox = () => {
+  //   axios.put(`/api/moments/${item.id}`, { completed: item.completed })
+  //     .then(res => getBucketAndMoments())
+  //     .catch(err => console.log(err))
+  // }
 
   const deleteItem = () => {
     let itemId = item.id 
@@ -21,7 +21,7 @@ const MomentsItem = (props) => {
 
   return (
     <div className='moments-item'>
-      <input type='checkbox' onChange={toggleCheckbox} />
+      {/* <input type='checkbox' onChange={toggleCheckbox} /> */}
       <h3>{item.list_item}</h3>
       <button onClick={deleteItem} className="delete">X</button>
     </div>
