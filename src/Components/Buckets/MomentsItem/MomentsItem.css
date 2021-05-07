@@ -1,17 +1,20 @@
 /* MomentsItem pg */
 
+/* List Items / checkbox and delete */
+
 .moments-item {
   background: rgb(198, 194, 194);
   min-height: 30px;
-  padding: 20px;
+  padding: 5px;
   margin-bottom: 10px;
   font-size: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid rgb(66, 62, 62);
+  border: 1px solid rgb(155, 162, 157);
   border-radius: 15px;
-  color: rgb(6, 94, 48);
+  color: rgb(74, 113, 92);
+  margin-top: 20px;
 }
 
 /* .moments-item input {

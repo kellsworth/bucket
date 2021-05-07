@@ -3,7 +3,6 @@ import './Moments.css';
 import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { updateBucket, updateMoments } from '../../redux/bucketReducer';
-// import BucketItem from '../../Components/Buckets/BucketItem/BucketItem';
 import MomentsItem from '../../Components/Buckets/MomentsItem/MomentsItem';
 
 
@@ -46,9 +45,9 @@ const Moments = (props) => {
       </div>
       <div>
         <div>
-          {/* {momentsList.map(item => {
+          {momentsList.map(item => {
             return <MomentsItem key={item.id} item={item} getBucketAndMoments={getBucketAndMoments} />
-          })} */}
+          })}
         </div>
         <div>
           {momentsList.map(item => {
@@ -70,37 +69,4 @@ const mapStateToProps = (stateRedux) => {
 }
 
 export default connect(mapStateToProps, { updateBucket, updateMoments })(Moments)
-
-
-
-
-
-
-
-
-
-// import { Component } from 'react';
-// import './Moments.css';
-
-// class Moments extends Component {
-//   constructor(props) {
-//     super(props)
-//     this.state = {
-//       momentInput: '',
-//     }
-//   }
-//   render() {
-//     return (
-//       <section>
-//         <h2>Moments List</h2>
-//         <div>
-//           moments
-//       </div>
-//       </section>
-//     )
-//   }
-// }
-
-// export default Moments
-
 
