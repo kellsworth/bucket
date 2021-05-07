@@ -19,7 +19,7 @@
 .auth-container {
   border-radius: 8px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
-  background-color: rgb(191, 197, 202);
+  background-color: rgb(165, 179, 167);
   width: 40vw;
   height: 35vh;
   display: flex;
@@ -68,6 +68,7 @@
   margin-left: 10px;
   border: none;
   color: black;
+  border-radius: 10px;
 }
 
 /* border of input field highlights */
@@ -78,9 +79,12 @@
 
 /* login and register buttons */
 .auth-button-container {
+  height: 25px;
+  width: 150px;
   display: flex;
   justify-content: space-around;
-  width: 55%;
+  border-radius: 30px;
+  /* width: 25%; */
 }
 
 .dark-button {
